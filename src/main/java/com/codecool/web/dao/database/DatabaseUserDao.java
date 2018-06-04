@@ -25,14 +25,10 @@ public final class DatabaseUserDao extends AbstractDao implements UserDao {
         }
     }
 
-    @Override
-    public User findByEmail(String email) throws SQLException {
-        if (email == null || "".equals(email)) {
-            throw new IllegalArgumentException("Email cannot be null or empty");
-        }
-        String sql = "SELECT id, email, password FROM users WHERE email = ?";
+    public User findById(int supplierId) throws SQLException {
+        String sql = "SELECT supplier_id FROM suppliers WHERE supplier_id=?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setString(1, email);
+            statement.setInt(1, supplierId);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     return fetchUser(resultSet);
@@ -43,9 +39,19 @@ public final class DatabaseUserDao extends AbstractDao implements UserDao {
     }
 
     private User fetchUser(ResultSet resultSet) throws SQLException {
-        int id = resultSet.getInt("id");
-        String email = resultSet.getString("email");
-        String password = resultSet.getString("password");
-        return new User(id, email, password);
+        int supplierId = resultSet.getInt("supplier_id");
+//        String companyName = resultSet.getString("company_name");
+//        String contactName = resultSet.getString("contact_name");
+//        String contactTitle = resultSet.getString("contact_title");
+//        String address = resultSet.getString("address");
+//        String city = resultSet.getString("city");
+//        String region = resultSet.getString("region");
+//        String postal_code = resultSet.getString("postal_code");
+//        String country = resultSet.getString("country");
+//        String phone = resultSet.getString("phone");
+//        String fax = resultSet.getString("fax");
+//        String homepage = resultSet.getString("homepage");
+        return new User(supplierId);
+//        return new User(supplierId, companyName, contactName, contactTitle, address, city, region, postal_code, country, phone, fax, homepage);
     }
 }

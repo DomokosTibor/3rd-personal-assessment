@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface UserDao {
 
-    User findByEmail(String email) throws SQLException;
+    User findById(int supplierId) throws SQLException;
 }

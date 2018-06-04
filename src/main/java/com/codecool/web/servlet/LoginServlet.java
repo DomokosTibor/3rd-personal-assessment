@@ -29,10 +29,9 @@ public final class LoginServlet extends AbstractServlet {
             UserDao userDao = new DatabaseUserDao(connection);
             LoginService loginService = new SimpleLoginService(userDao);
 
-            String email = req.getParameter("email");
-            String password = req.getParameter("password");
+            int supplierId = Integer.parseInt(req.getParameter("supplier_id"));
 
-            User user = loginService.loginUser(email, password);
+            User user = loginService.loginUser(supplierId);
 
             req.getSession().setAttribute("user", user);
             resp.sendRedirect("protected/profile");
