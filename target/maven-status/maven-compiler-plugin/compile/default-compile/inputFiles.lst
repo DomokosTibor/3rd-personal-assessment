@@ -1,0 +1,14 @@
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/dao/database/DatabaseUserDao.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/servlet/AbstractServlet.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/listener/WebappContextListener.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/service/simple/SimpleLoginService.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/model/AbstractModel.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/model/User.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/dao/UserDao.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/service/LoginService.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/filter/SessionFilter.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/servlet/LogoutServlet.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/service/exception/ServiceException.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/dao/database/AbstractDao.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/servlet/LoginServlet.java
+/home/tib/Documents/develop/Local-Repo/java/jwdb-2nd-si-intellij-maven-jdbc-quickstart/src/main/java/com/codecool/web/servlet/ProfileServlet.java
