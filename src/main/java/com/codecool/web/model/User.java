@@ -16,10 +16,6 @@ public final class User {
     private final String fax;
     private final String homepage;
 
-//    public User(int supplierId) {
-//        this.supplierId = supplierId;
-//    }
-
     public User(String userRole, int userId, String companyName, String contactName, String contactTitle, String address, String city, String region, String postalCode, String country, String phone, String fax, String homepage) {
         this.userRole = userRole;
         this.userId = userId;
@@ -88,18 +84,4 @@ public final class User {
         return homepage;
     }
 
-    //    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        if (!super.equals(o)) return false;
-//        User user = (User) o;
-//        return Objects.equals(email, user.email) &&
-//            Objects.equals(password, user.password);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(super.hashCode(), email, password);
-//    }
 }

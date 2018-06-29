@@ -2,7 +2,6 @@ package com.codecool.web.servlet;
 
 import com.codecool.web.dao.SupplierProductsDB;
 import com.codecool.web.service.SupplierProductsService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;

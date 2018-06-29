@@ -20,15 +20,15 @@
 	<div class="content">
         <h1>Add Product</h1>
         <form action="AddProductsServlet" method="post">
-            <input type="text" name="supplier_id" value="${user_id}" readonly>
+            <input type="hidden" name="supplier_id" value="${user_id}" readonly>
             <table class="stripe">
                 <tr>
                     <td><b>Product ID:</b></td>
-                    <td><input type="text" name="product_id" value="" required></td>
+                    <td><input type="text" name="product_id" value="" required> *</td>
                 </tr>
                 <tr>
                     <td><b>Product Name:</b></td>
-                    <td><input type="text" name="product_name" value=""></td>
+                    <td><input type="text" name="product_name" value="" required> *</td>
                 </tr>
                 <tr>
                     <td><b>Category:</b></td>
@@ -67,12 +67,17 @@
                 </tr>
                 <tr>
                     <td><b>Discontinued:</b></td>
-                    <td><input type="text" name="discontinued" value="" required></td>
+                    <td><input type="text" name="discontinued" value="" required> *</td>
                 </tr>
             </table>
+            <p>* Required fields</p>
             <input type="submit" value="Add product">
+            <input type="reset" value="Reset">
+            <button onclick="window.location.href='profile'">Back</button>
         </form>
-        <button onclick="window.location.href='profile'">Back</button>
+        <c:if test="${not empty error}">
+            <p class="error">${error}</p>
+        </c:if>
 	</div>
 </body>
 

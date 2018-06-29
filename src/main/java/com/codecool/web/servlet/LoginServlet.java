@@ -42,10 +42,12 @@ public final class LoginServlet extends AbstractServlet {
 
             req.getSession().setAttribute("user", user);
             resp.sendRedirect("protected/profile");
-        } catch (ServiceException ex) {
+        }
+        catch (ServiceException ex) {
             req.setAttribute("error", ex.getMessage());
             req.getRequestDispatcher("login.jsp").forward(req, resp);
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             throw new ServletException(ex);
         }
     }

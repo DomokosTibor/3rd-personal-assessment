@@ -77,6 +77,9 @@
                         or
                         <input type="text" name="product_name" value="" placeholder=" Product Name">
                         <input type="submit" value="Check">
+                        <c:if test="${not empty error}">
+                            <p class="error">${error}</p>
+                        </c:if>
                     </form>
                 </li>
                 <li><a href="<c:url value="AddProductsServlet"><c:param name="user_id" value="${user.userId}"/></c:url>">Add product</a></li>

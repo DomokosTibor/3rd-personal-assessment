@@ -20,8 +20,8 @@
 	<div class="content">
 	    <h1>All Products</h1>
         <form action="AllProductsServlet" method="post">
-            <input type="text" value="" name="filter" placeholder="Product Name">
-            <input type="submit" value="Filter">
+            <input type="text" value="" name="filter" placeholder=" Product Name">
+            <input type="submit" value="Search">
         </form>
         <table class="stripe">
         <tr>

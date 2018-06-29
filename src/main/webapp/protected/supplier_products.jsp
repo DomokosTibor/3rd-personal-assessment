@@ -21,8 +21,8 @@
         <h1>Supplier Products</h1>
         <form action="SupplierProductsServlet" method="post">
             <input type="hidden" name="user_id" value="${user.userId}" readonly>
-            <input type="text" name="filter" value="" placeholder="Product Name">
-            <input type="submit" value="Filter">
+            <input type="text" name="filter" value="" placeholder=" Product Name">
+            <input type="submit" value="Search">
         </form>
         <table class="stripe">
         <tr>

@@ -16,9 +16,6 @@ public class AddProductsServlet extends AbstractServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try (Connection connection = getConnection(req.getServletContext())) {
-//            AddProductsDB db = new AddProductsDB(connection);
-//            AddProductsService dbService = new AddProductsService(db);
-//            int userId = Integer.parseInt(req.getParameter("user_id"));
             req.setAttribute("user_id",Integer.parseInt(req.getParameter("user_id")));
             req.getRequestDispatcher("add_products.jsp").forward(req, resp);
         }
@@ -32,17 +29,30 @@ public class AddProductsServlet extends AbstractServlet {
         try (Connection connection = getConnection(req.getServletContext())) {
             AddProductsDB db = new AddProductsDB(connection);
             AddProductsService dbService = new AddProductsService(db);
-            int productId = Integer.parseInt(req.getParameter("product_id"));
+            int productId = 0;
+            int supplierId = 0;
+            int categoryId = 0;
+            int unitPrice = 0;
+            int unitsInStock = 0;
+            int unitsOnOrder = 0;
+            int reorderLevel = 0;
+            int discontinued = 0;
+            try{
+                productId = Integer.parseInt(req.getParameter("product_id"));
+                supplierId = Integer.parseInt(req.getParameter("supplier_id"));
+                categoryId = Integer.parseInt(req.getParameter("category_id"));
+                unitPrice = Integer.parseInt(req.getParameter("unit_price"));
+                unitsInStock = Integer.parseInt(req.getParameter("units_in_stock"));
+                unitsOnOrder = Integer.parseInt(req.getParameter("units_on_order"));
+                reorderLevel = Integer.parseInt(req.getParameter("reorder_level"));
+                discontinued = Integer.parseInt(req.getParameter("discontinued"));
+            }
+            catch (NumberFormatException ex) {
+                req.setAttribute("error", "Please use only numbers for: Product ID, Unit price, Units in stock, Units on order, Reorder Level, Discontinued");
+                req.getRequestDispatcher("add_products.jsp").forward(req, resp);
+            }
             String productName = req.getParameter("product_name");
-            int supplierId = Integer.parseInt(req.getParameter("supplier_id"));
-            int categoryId = Integer.parseInt(req.getParameter("category_id"));
             String quantityPerUnit = req.getParameter("quantity_per_unit");
-            int unitPrice = Integer.parseInt(req.getParameter("unit_price"));
-            int unitsInStock = Integer.parseInt(req.getParameter("units_in_stock"));
-            int unitsOnOrder = Integer.parseInt(req.getParameter("units_on_order"));
-            int reorderLevel = Integer.parseInt(req.getParameter("reorder_level"));
-            int discontinued = Integer.parseInt(req.getParameter("discontinued"));
-//            req.setAttribute("product",dbService.addProduct(productId, productName, supplierId, categoryId, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued));
             dbService.addProduct(productId, productName, supplierId, categoryId, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued);
             req.getRequestDispatcher("add_products.jsp").forward(req, resp);
         }
