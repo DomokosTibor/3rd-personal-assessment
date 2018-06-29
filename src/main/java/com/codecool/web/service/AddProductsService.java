@@ -13,13 +13,12 @@ public class AddProductsService {
         this.db = db;
     }
 
-    public List<SupplierProducts> ap(int userId) throws SQLException {
-        List<SupplierProducts> result = db.addProduct(userId);
-        return result;
-    }
+//    public List<SupplierProducts> ap(int userId) throws SQLException {
+//        List<SupplierProducts> result = db.addProduct(userId);
+//        return result;
+//    }
 
-    public List<SupplierProducts> addProduct(int productId, String productName, int supplierId, int categoryId, int quantityPerUnit, int unitPrice, int unitsInStock, int unitsOnOrder, int reorderLevel, int discontinued) throws SQLException {
-        List<SupplierProducts> result = db.addProduct(productId, productName, supplierId, categoryId, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued);
-        return result;
+    public void addProduct(int productId, String productName, int supplierId, int categoryId, String quantityPerUnit, int unitPrice, int unitsInStock, int unitsOnOrder, int reorderLevel, int discontinued) throws SQLException {
+        db.addProduct(productId, productName, supplierId, categoryId, quantityPerUnit, unitPrice, unitsInStock, unitsOnOrder, reorderLevel, discontinued);
     }
 }

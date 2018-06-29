@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Supplier Products</title>
+    <title>Product Details</title>
 	<link rel="shortcut icon" type="image/png" href="../images/site_logo.png">
 	<link rel="shortcut icon" type="image/png" href="../images/site_logo.png">
 	<link rel="stylesheet" type="text/css" href="../css/protected.css">

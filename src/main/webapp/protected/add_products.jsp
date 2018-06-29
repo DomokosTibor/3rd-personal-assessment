@@ -20,7 +20,7 @@
 	<div class="content">
         <h1>Add Product</h1>
         <form action="AddProductsServlet" method="post">
-            <input type="text" name="supplier_id" value="${user.userId}" readonly>
+            <input type="text" name="supplier_id" value="${user_id}" readonly>
             <table class="stripe">
                 <tr>
                     <td><b>Product ID:</b></td>
@@ -32,6 +32,7 @@
                 </tr>
                 <tr>
                     <td><b>Category:</b></td>
+                    <td>
                     <select name="category_id">
                         <option value="1">Beverages</option>
                         <option value="2">Condiments</option>
@@ -42,6 +43,7 @@
                         <option value="7">Produce</option>
                         <option value="8">Seafood</option>
                     </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Quantity per Unit:</b></td>

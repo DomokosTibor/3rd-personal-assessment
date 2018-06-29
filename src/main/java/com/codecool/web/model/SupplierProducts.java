@@ -23,19 +23,19 @@ public class SupplierProducts {
         this.categoryName = categoryName;
     }
 
-    public SupplierProducts(int productId, String productName, int supplier_id, int category_id, String categoryName, int quantity_per_unit, double unitPrice, int unitsInStock, int units_on_order, int reorder_level, int discontinued) {
-        this.productId = productId;
-        this.productName = productName;
-        this.supplier_id = supplier_id;
-        this.category_id = category_id;
-        this.categoryName = categoryName;
-        this.quantity_per_unit = quantity_per_unit;
-        this.unitPrice = unitPrice;
-        this.unitsInStock = unitsInStock;
-        this.units_on_order = units_on_order;
-        this.reorder_level = reorder_level;
-        this.discontinued = discontinued;
-    }
+//    public SupplierProducts(int productId, String productName, int supplier_id, int category_id, String categoryName, int quantity_per_unit, double unitPrice, int unitsInStock, int units_on_order, int reorder_level, int discontinued) {
+//        this.productId = productId;
+//        this.productName = productName;
+//        this.supplier_id = supplier_id;
+//        this.category_id = category_id;
+//        this.categoryName = categoryName;
+//        this.quantity_per_unit = quantity_per_unit;
+//        this.unitPrice = unitPrice;
+//        this.unitsInStock = unitsInStock;
+//        this.units_on_order = units_on_order;
+//        this.reorder_level = reorder_level;
+//        this.discontinued = discontinued;
+//    }
 
     public int getProductId() {
         return productId;
