@@ -1,0 +1,91 @@
+body {
+	margin: 0px;
+    height: 100%;
+	background-color: #e9ebee;
+	color: #223052;
+}
+header {
+	position: fixed;
+	top: 0px;
+    width: 100%;
+    height: 80px;
+	background-image: url("../images/site_logo.png");
+    background-repeat: no-repeat;
+    background-size: 210px 80px;
+	background-position: 10px 0px;
+    background-color: #405281;
+    line-height: 80px;
+	border-bottom: 2px solid #223052;
+}
+form {
+	padding-right: 20px;
+	text-align: right;
+}
+input, select {
+	background-color : #e9ebee;
+}
+.content {
+	margin: 100px auto 20px;
+	padding: 20px 15px 20px 15px;
+	width: 80%;
+	background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 120px 120px;
+	text-align: justify;
+	border: 1px solid #a8b7c0;
+}
+.supplier {
+	background-image: url("../images/supplier.png");
+}
+.shipper {
+	background-image: url("../images/shipper.png");
+}
+.content form {
+	text-align: left;
+}
+table {
+    margin: 10px 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.stripe th {
+    padding: 0px 20px;
+    background-color: #405281;
+    line-height: 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+}
+.stripe tr:nth-child(even) {
+    background: #e9ebee;
+    line-height: 22px;
+}
+
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+li {
+    padding: 10px;
+    overflow: auto;
+    border-bottom: 1px solid #a8b7c0;
+}
+li:last-child {
+    border-bottom: none;
+}
+li:hover {
+    background: #e9ebee;
+    cursor: pointer;
+}
+a:link, a:visited, a:active, a:hover {
+    font-weight: bold;
+    color: #223052;
+    text-decoration: none;
+}
+.first_char_big::first-letter {
+    text-transform: uppercase;
+}

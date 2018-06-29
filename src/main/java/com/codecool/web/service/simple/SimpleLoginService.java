@@ -4,7 +4,6 @@ import com.codecool.web.dao.UserDao;
 import com.codecool.web.model.User;
 import com.codecool.web.service.LoginService;
 import com.codecool.web.service.exception.ServiceException;
-
 import java.sql.SQLException;
 
 public final class SimpleLoginService implements LoginService {
@@ -16,10 +15,10 @@ public final class SimpleLoginService implements LoginService {
     }
 
     @Override
-    public User loginUser(int supplierId) throws SQLException, ServiceException {
-        User user = userDao.findById(supplierId);
+    public User loginUser(int userId, String userRole) throws SQLException, ServiceException {
+        User user = userDao.findById(userId, userRole);
         if (user == null) {
-            throw new ServiceException("Bad login");
+            throw new ServiceException("User not exist");
         }
         return user;
     }

@@ -13,45 +13,59 @@ public final class DatabaseUserDao extends AbstractDao implements UserDao {
         super(connection);
     }
 
-    public List<User> findAll() throws SQLException {
-        String sql = "SELECT id, email, password FROM users";
-        try (Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
-            List<User> users = new ArrayList<>();
-            while (resultSet.next()) {
-                users.add(fetchUser(resultSet));
-            }
-            return users;
+    public User findById(int userId, String userRole) throws SQLException {
+        String sql;
+        if (userRole.equals("Supplier")) {
+            sql = "SELECT * FROM suppliers WHERE supplier_id=?";
         }
-    }
-
-    public User findById(int supplierId) throws SQLException {
-        String sql = "SELECT supplier_id FROM suppliers WHERE supplier_id=?";
+        else {
+            sql = "SELECT * FROM shippers WHERE shipper_id=?";
+        }
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, supplierId);
+            statement.setInt(1, userId);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return fetchUser(resultSet);
+                    return fetchUser(resultSet, userRole);
                 }
             }
         }
         return null;
     }
 
-    private User fetchUser(ResultSet resultSet) throws SQLException {
-        int supplierId = resultSet.getInt("supplier_id");
-//        String companyName = resultSet.getString("company_name");
-//        String contactName = resultSet.getString("contact_name");
-//        String contactTitle = resultSet.getString("contact_title");
-//        String address = resultSet.getString("address");
-//        String city = resultSet.getString("city");
-//        String region = resultSet.getString("region");
-//        String postal_code = resultSet.getString("postal_code");
-//        String country = resultSet.getString("country");
-//        String phone = resultSet.getString("phone");
-//        String fax = resultSet.getString("fax");
-//        String homepage = resultSet.getString("homepage");
-        return new User(supplierId);
-//        return new User(supplierId, companyName, contactName, contactTitle, address, city, region, postal_code, country, phone, fax, homepage);
+    private User fetchUser(ResultSet resultSet, String userRole) throws SQLException {
+        int userId;
+        String companyName = null;
+        String contactName = null;
+        String contactTitle = null;
+        String address = null;
+        String city = null;
+        String region = null;
+        String postalCode = null;
+        String country = null;
+        String phone = null;
+        String fax = null;
+        String homepage = null;
+
+        if (userRole.equals("Supplier")) {
+            userId = resultSet.getInt("supplier_id");
+            companyName = resultSet.getString("company_name");
+            contactName = resultSet.getString("contact_name");
+            contactTitle = resultSet.getString("contact_title");
+            address = resultSet.getString("address");
+            city = resultSet.getString("city");
+            region = resultSet.getString("region");
+            postalCode = resultSet.getString("postal_code");
+            country = resultSet.getString("country");
+            phone = resultSet.getString("phone");
+            fax = resultSet.getString("fax");
+            homepage = resultSet.getString("homepage");
+        }
+        else {
+            userId = resultSet.getInt("shipper_id");
+            companyName = resultSet.getString("company_name");
+            phone = resultSet.getString("phone");
+        }
+
+        return new User(userRole, userId, companyName, contactName, contactTitle, address, city, region, postalCode, country, phone, fax, homepage);
     }
 }

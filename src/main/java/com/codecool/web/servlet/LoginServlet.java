@@ -28,10 +28,17 @@ public final class LoginServlet extends AbstractServlet {
         try (Connection connection = getConnection(req.getServletContext())) {
             UserDao userDao = new DatabaseUserDao(connection);
             LoginService loginService = new SimpleLoginService(userDao);
+            int userId = 0;
+            try{
+                userId = Integer.parseInt(req.getParameter("id"));
+            }
+            catch (NumberFormatException ex) {
+                req.setAttribute("error", "Only numbers allowed!");
+                req.getRequestDispatcher("login.jsp").forward(req, resp);
+            }
+            String userRole = req.getParameter("role");
 
-            int supplierId = Integer.parseInt(req.getParameter("supplier_id"));
-
-            User user = loginService.loginUser(supplierId);
+            User user = loginService.loginUser(userId, userRole);
 
             req.getSession().setAttribute("user", user);
             resp.sendRedirect("protected/profile");

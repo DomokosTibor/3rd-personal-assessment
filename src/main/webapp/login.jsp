@@ -3,24 +3,28 @@
 <!doctype html>
 <html lang="en">
 
-<jsp:include page="snippets/head.jsp">
-    <jsp:param name="title" value="Login"/>
-</jsp:include>
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+	<link rel="shortcut icon" type="image/png" href="images/site_logo.png">
+	<link rel="shortcut icon" type="image/png" href="images/site_logo.png">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
 
 <body>
-<h1>Login Page</h1>
-
-
-<form method="post" action="login">
-    <input type="text" name="supplier_id" placeholder="Supplier ID">
-    <input type="submit" value="Login">
-</form>
-
-
-<jsp:include page="snippets/show-error.jsp"/>
+	<header>
+		<form method="post" action="login">
+			<input type="text" name="id" placeholder=" ID number" required>
+			<select name="role">
+				<option value="Supplier">Supplier</option>
+				<option value="Shipper">Shipper</option>
+			</select>
+			<input type="submit" value="Login">
+		</form>
+	</header>
+    <c:if test="${not empty error}">
+        <p class="error">${error}</p>
+    </c:if>
 </body>
+
 </html>
-
-
-
-
