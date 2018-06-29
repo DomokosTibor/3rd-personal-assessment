@@ -3,24 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="52689c0f-1819-424c-b8fc-571a1ef860cf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/AddProductsDB.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/AddProductsDB.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/model/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/service/AddProductsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/service/AddProductsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/AddProductsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/AddProductsServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/AllProductsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/AllProductsServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/LoginServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProfileServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProfileServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/SupplierProductsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/SupplierProductsServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/protected.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/protected.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/protected/add_products.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/protected/add_products.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/protected/all_products.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/protected/all_products.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/protected/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/protected/profile.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/protected/supplier_products.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/protected/supplier_products.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/snippets/head.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/snippets/logout.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/snippets/show-error.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/snippets/show-info.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/snippets/to-profile.jsp" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/3rd-pa-web.war" afterPath="$PROJECT_DIR$/target/3rd-pa-web.war" />
-      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/WEB-INF/classes/com/codecool/web/dao/AddProductsDB.class" afterPath="$PROJECT_DIR$/target/3rd-pa-web/WEB-INF/classes/com/codecool/web/dao/AddProductsDB.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/web/dao/AddProductsDB.class" afterPath="$PROJECT_DIR$/target/classes/com/codecool/web/dao/AddProductsDB.class" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/snippets/head.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/snippets/logout.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/snippets/show-error.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/snippets/show-info.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/snippets/to-profile.jsp" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -561,20 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/snippets/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/snippets/logout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -792,6 +771,22 @@
             <element signature="imports" expanded="false" />
             <marker date="1530302950709" expanded="true" signature="538:759" ph=" INSERT statement (PRODUCTS)" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/snippets/logout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/snippets/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
