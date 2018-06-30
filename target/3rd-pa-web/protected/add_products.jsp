@@ -73,10 +73,13 @@
             <p>* Required fields</p>
             <input type="submit" value="Add product">
             <input type="reset" value="Reset">
-            <button onclick="window.location.href='profile'">Back</button>
         </form>
+        <button onclick="window.location.href='profile'">Back</button>
         <c:if test="${not empty error}">
             <p class="error">${error}</p>
+        </c:if>
+        <c:if test="${not empty successful}">
+            <p class="successful">${successful}</p>
         </c:if>
 	</div>
 </body>
