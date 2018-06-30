@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52689c0f-1819-424c-b8fc-571a1ef860cf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/AddProductsDB.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/service/AddProductsService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/protected/product_details.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/protected/product_details.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/WEB-INF/classes/com/codecool/web/dao/AddProductsDB.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/3rd-pa-web/WEB-INF/classes/com/codecool/web/service/AddProductsService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/web/dao/AddProductsDB.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/web/service/AddProductsService.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,7 +20,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SupplierProductsDB.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-55">
+              <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+              <folding>
+                <marker date="1530350083208" expanded="true" signature="949:1226" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+                <marker date="1530350083208" expanded="true" signature="1789:1992" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+                <marker date="1530350083208" expanded="true" signature="1789:2107" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+                <marker date="1530350083208" expanded="true" signature="3560:4134" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+                <marker date="1530350083208" expanded="true" signature="3560:4136" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+                <marker date="1530350083208" expanded="true" signature="4718:5315" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+                <marker date="1530350083208" expanded="true" signature="6197:6418" ph=" INSERT statement (PRODUCTS)" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,7 +54,6 @@
       <find>email</find>
       <find>resultset</find>
       <find>task</find>
-      <find>resul</find>
       <find>ap</find>
       <find>p {</find>
       <find>roll</find>
@@ -42,6 +66,8 @@
       <find>Please</find>
       <find>set</find>
       <find>supplier_id</find>
+      <find>categoryName</find>
+      <find>resul</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/.settings</dir>
@@ -76,24 +102,24 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/login.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/model/AddProducts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/service/AllProductsService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/protected/product_details.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/protected/all_products.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/protected/supplier_products.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/protected/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/SupplierProductsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProfileServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/AllProductsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/AddProductsDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/service/AddProductsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/service/SupplierProductsService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/protected.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/AddProductsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/protected/add_products.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/protected/product_details.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java" />
       </list>
     </option>
   </component>
@@ -152,80 +178,6 @@
               <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intellij-maven-jdbc-quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jwdb-2nd-si-intellij-maven-jdbc-quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="protected" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -400,7 +352,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30793157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27729085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17928287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -430,13 +382,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1530334593258" expanded="true" signature="949:1226" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="1789:1992" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="1789:2107" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="2875:3206" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="3688:3969" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="3688:4026" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="4773:4994" ph=" INSERT statement (PRODUCTS)" />
+            <marker date="1530350083208" expanded="true" signature="949:1226" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+            <marker date="1530350083208" expanded="true" signature="1789:1992" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+            <marker date="1530350083208" expanded="true" signature="1789:2107" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+            <marker date="1530350083208" expanded="true" signature="3560:4134" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+            <marker date="1530350083208" expanded="true" signature="3560:4136" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+            <marker date="1530350083208" expanded="true" signature="4718:5315" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+            <marker date="1530350083208" expanded="true" signature="6197:6418" ph=" INSERT statement (PRODUCTS)" />
           </folding>
         </state>
       </provider>
@@ -591,14 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/protected/product_details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -689,14 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/dao/AllProductsDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -756,36 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
-          <folding>
-            <marker date="1530334593258" expanded="true" signature="949:1226" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="1789:1992" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="1789:2107" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="2875:3206" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="3688:3969" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="3688:4026" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
-            <marker date="1530334593258" expanded="true" signature="4773:4994" ph=" INSERT statement (PRODUCTS)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProfileServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -813,16 +723,8 @@
         <state relative-caret-position="563">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/service/SupplierProductsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,6 +733,54 @@
         <state relative-caret-position="56">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/protected/product_details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/servlet/ProductDetailsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="39" column="59" lean-forward="false" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/service/SupplierProductsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/model/SupplierProducts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="19" column="118" lean-forward="false" selection-start-line="19" selection-start-column="118" selection-end-line="19" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/web/dao/SupplierProductsDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+          <folding>
+            <marker date="1530350083208" expanded="true" signature="949:1226" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+            <marker date="1530350083208" expanded="true" signature="1789:1992" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+            <marker date="1530350083208" expanded="true" signature="1789:2107" ph=" SELECT statement (PRODUCTS, CATEGORIES)" />
+            <marker date="1530350083208" expanded="true" signature="3560:4134" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+            <marker date="1530350083208" expanded="true" signature="3560:4136" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+            <marker date="1530350083208" expanded="true" signature="4718:5315" ph=" SELECT statement (ORDER_DETAILS, PRODUCTS, CATEGORIES...)" />
+            <marker date="1530350083208" expanded="true" signature="6197:6418" ph=" INSERT statement (PRODUCTS)" />
+          </folding>
         </state>
       </provider>
     </entry>

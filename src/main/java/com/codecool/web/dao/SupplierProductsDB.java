@@ -60,39 +60,64 @@ public class SupplierProductsDB {
         return filteredProducts;
     }
 
+
+    private SupplierProducts createSupplierProductDetail(ResultSet resultSet) throws SQLException {
+        int productId = resultSet.getInt("product_id");
+        String productName = resultSet.getString("product_name");
+        double unitPrice = resultSet.getDouble("unit_price");
+        int unitsInStock = resultSet.getInt("units_in_stock");
+        String categoryName = resultSet.getString("category_name");
+        int numberOfOrders = resultSet.getInt("number_of_orders");
+        Double totalIncome = resultSet.getDouble("total_income");
+        return new SupplierProducts(productId, productName, unitPrice, unitsInStock, categoryName, numberOfOrders, totalIncome);
+    }
+
     public List<SupplierProducts> getProductDetails(int userId, int productId, String productName) throws SQLException {
         List<SupplierProducts> productDetails = new ArrayList<>();
         if (productName.equals("")) {
-            String sql = "SELECT product_id, product_name, unit_price, units_in_stock, categories.category_name " +
+            String sql = "SELECT product_id, product_name, unit_price, units_in_stock, categories.category_name, " +
+                "(SELECT COUNT(order_id) AS number_of_orders " +
+                "FROM order_details " +
+                "WHERE product_id=?), " +
+                "(SELECT SUM(unit_price) AS total_income " +
+                "FROM order_details " +
+                "WHERE product_id=?) " +
                 "FROM products " +
                 "JOIN categories ON categories.category_id = products.category_id " +
                 "WHERE supplier_id=? " +
-                "AND product_id=? " +
-                "ORDER BY product_id ASC;";
-
+                "AND product_id=?;";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.setInt(1, userId);
+                statement.setInt(1, productId);
                 statement.setInt(2, productId);
+                statement.setInt(3, userId);
+                statement.setInt(4, productId);
                 try (ResultSet resultSet = statement.executeQuery()) {
                     while (resultSet.next()) {
-                        productDetails.add(createSupplierProducts(resultSet));
+                        productDetails.add(createSupplierProductDetail(resultSet));
                     }
                 }
             }
         }
         else {
-            String sql = "SELECT product_id, product_name, unit_price, units_in_stock, categories.category_name " +
+            String sql = "SELECT product_id, product_name, unit_price, units_in_stock, categories.category_name, " +
+                "(SELECT COUNT(order_id) AS number_of_orders " +
+                "FROM order_details " +
+                "WHERE product_name LIKE ?), " +
+                "(SELECT SUM(unit_price) AS total_income " +
+                "FROM order_details " +
+                "WHERE product_name LIKE ?) " +
                 "FROM products " +
                 "JOIN categories ON categories.category_id = products.category_id " +
                 "WHERE supplier_id=? " +
-                "AND product_name LIKE ? " +
-                "ORDER BY product_id ASC;";
+                "AND product_name LIKE ?;";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.setInt(1, userId);
+                statement.setString(1, "%" + productName + "%");
                 statement.setString(2, "%" + productName + "%");
+                statement.setInt(3, userId);
+                statement.setString(4, "%" + productName + "%");
                 try (ResultSet resultSet = statement.executeQuery()) {
                     while (resultSet.next()) {
-                        productDetails.add(createSupplierProducts(resultSet));
+                        productDetails.add(createSupplierProductDetail(resultSet));
                     }
                 }
             }

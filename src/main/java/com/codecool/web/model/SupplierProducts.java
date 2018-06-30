@@ -14,12 +14,25 @@ public class SupplierProducts {
     private int reorder_level;
     private int discontinued;
 
+    private int numberOfOrders;
+    private Double totalIncome;
+
     public SupplierProducts(int productId, String productName, double unitPrice, int unitsInStock, String categoryName) {
         this.productId = productId;
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.unitsInStock = unitsInStock;
         this.categoryName = categoryName;
+    }
+
+    public SupplierProducts(int productId, String productName, double unitPrice, int unitsInStock, String categoryName, int numberOfOrders, Double totalIncome) {
+        this.productId = productId;
+        this.productName = productName;
+        this.unitPrice = unitPrice;
+        this.unitsInStock = unitsInStock;
+        this.categoryName = categoryName;
+        this.numberOfOrders = numberOfOrders;
+        this.totalIncome = totalIncome;
     }
 
     public int getProductId() {
@@ -64,5 +77,13 @@ public class SupplierProducts {
 
     public int getDiscontinued() {
         return discontinued;
+    }
+
+    public int getNumberOfOrders() {
+        return numberOfOrders;
+    }
+
+    public Double getTotalIncome() {
+        return totalIncome;
     }
 }

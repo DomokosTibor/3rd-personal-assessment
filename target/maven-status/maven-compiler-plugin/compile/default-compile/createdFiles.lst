@@ -7,7 +7,6 @@ com/codecool/web/model/AllProducts.class
 com/codecool/web/filter/SessionFilter.class
 com/codecool/web/service/exception/ServiceException.class
 com/codecool/web/model/SupplierProducts.class
-com/codecool/web/service/AddProductsService.class
 com/codecool/web/dao/AllProductsDB.class
 com/codecool/web/dao/UserDao.class
 com/codecool/web/service/simple/SimpleLoginService.class
@@ -23,4 +22,3 @@ com/codecool/web/servlet/SupplierProductsServlet.class
 com/codecool/web/servlet/ProfileServlet.class
 com/codecool/web/model/User.class
 com/codecool/web/servlet/AddProductsServlet.class
-com/codecool/web/dao/AddProductsDB.class

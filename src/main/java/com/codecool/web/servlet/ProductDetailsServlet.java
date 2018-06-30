@@ -37,7 +37,7 @@ public class ProductDetailsServlet extends AbstractServlet {
                 }
             }
 
-            req.setAttribute("product",dbService.productDetails(userId, productId, productName));
+            req.setAttribute("product", dbService.productDetails(userId, productId, productName));
             req.getRequestDispatcher("product_details.jsp").forward(req, resp);
 
         }

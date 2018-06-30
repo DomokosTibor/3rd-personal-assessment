@@ -26,6 +26,8 @@
             <th><b>Unit Price</b></th>
             <th><b>Unit In Stock</b></th>
             <th><b>Category Name</b></th>
+            <th><b>Number of Orders</b></th>
+            <th><b>Total income</b></th>
         </tr>
         <c:forEach items="${product}" var='product'>
         <tr>
@@ -34,6 +36,8 @@
             <td>${product.unitPrice}</td>
             <td>${product.unitsInStock}</td>
             <td>${product.categoryName}</td>
+            <td>${product.numberOfOrders}</td>
+            <td>${product.totalIncome}</td>
         </tr>
         </c:forEach>
         </table>
