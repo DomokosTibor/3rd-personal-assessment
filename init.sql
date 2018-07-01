@@ -1,3 +1,5 @@
+ROLLBACK;
+
 DROP TABLE IF EXISTS insurance_bonds;
 DROP TABLE IF EXISTS insurance_services;
 DROP TABLE IF EXISTS insurance_companies;
@@ -68,7 +70,6 @@ SELECT email, salary FROM users;
 
 /* Delete existing user */
 BEGIN;
-    ROLLBACK;
     DELETE FROM users WHERE id=1;
     DELETE FROM insurance_bonds WHERE user_id=1;
 COMMIT;
@@ -100,21 +101,16 @@ DELETE FROM cars WHERE id=1;
 
 /* Add new insurance company */
 BEGIN;
-    ROLLBACK;
     INSERT INTO insurance_companies (name) VALUES ('K&H');
     INSERT INTO insurance_services (name, minimum_salary, length, issuer) VALUES ('General issue', 1000, 1, 'K&H');
+COMMIT;
+BEGIN;
+    INSERT INTO insurance_companies (name) VALUES ('Generali');
+    INSERT INTO insurance_services (name, minimum_salary, length, issuer) VALUES ('Ice issue', 500, 1, 'Generali');
 COMMIT;
 
 /* List insurance companies */
 SELECT name FROM insurance_companies;
-
-/* Delete existing insurance company */
-/*
-DELETE FROM insurance_companies
-WHERE NOT EXISTS (SELECT NULL
-                    FROM insurance_bonds
-                   WHERE insurance_bonds.company_id = insurance_companies.id);
-*/
 
 /* Add new insurance service */
 INSERT INTO insurance_services (name, minimum_salary, length, issuer) VALUES ('Ice', 500, 1, 'K&H');
@@ -125,17 +121,13 @@ SELECT name FROM insurance_services;
 /* List insurance company services */
 SELECT name, issuer, minimum_salary, length FROM insurance_services WHERE issuer LIKE '%era%';
 
-/* Delete an existing insurance service */
-
-
 /* Insure car */
-INSERT INTO insurance_bonds (user_id, car_id, company_id, service_id, issued_date) VALUES (1, 1, 1, 1, '2019-01-01');
+INSERT INTO insurance_bonds (user_id, car_id, company_id, service_id, issued_date) VALUES (2, 2, 1, 1, '2018-01-01');
 
 /* Lengthen insurance bond */
 BEGIN;
-    ROLLBACK;
-    DELETE FROM insurance_bonds WHERE user_id=1 AND car_id=1 AND company_id=1 AND service_id=1;
-    INSERT INTO insurance_bonds (user_id, car_id, company_id, service_id, issued_date) VALUES (1, 1, 1, 1, '2020-01-01');
+    DELETE FROM insurance_bonds WHERE user_id=1 AND car_id=2 AND company_id=1 AND service_id=1;
+    INSERT INTO insurance_bonds (user_id, car_id, company_id, service_id, issued_date) VALUES (2, 2, 1, 1, '2019-01-01');
 COMMIT;
 
 /* List invalid insurance bonds */
@@ -150,3 +142,35 @@ FROM insurance_bonds
 INNER JOIN insurance_companies ON insurance_companies.id = insurance_bonds.company_id
 GROUP BY company_id
 ORDER BY COUNT(company_id) ASC;
+
+/* Delete existing insurance company */
+DELETE FROM insurance_companies
+WHERE NOT EXISTS (
+    SELECT id
+    FROM insurance_bonds
+    WHERE insurance_bonds.company_id = insurance_companies.id
+    );
+
+/* Delete an existing insurance service */
+DELETE FROM insurance_services
+WHERE NOT EXISTS (
+    SELECT service_id
+    FROM insurance_bonds
+    WHERE insurance_bonds.service_id = insurance_services.id
+);
+
+--BEGIN;
+--    /* Delete old services */
+--    DELETE FROM insurance_bonds
+--    WHERE id=(
+--        SELECT id
+--        FROM insurance_bonds
+--        WHERE insurance_bonds.issued_date < NOW()
+--    );
+--    DELETE FROM insurance_services
+--    WHERE NOT EXISTS (
+--        SELECT service_id
+--        FROM insurance_bonds
+--        WHERE insurance_bonds.service_id = insurance_services.id
+--    );
+--COMMIT;
